@@ -67,13 +67,14 @@
     {
       "id": "carl_pei_big_eyes",
       "name": "Big Eyes",
-      "description": "Interactive dynamic eyes widget inspired by Nothing Playground",
+      "description": "Interactive expressive eyes widget inspired by Nothing Playground.",
       "version": 1,
       "icon": "👀",
       "definition": {
         "id": "carl_pei_big_eyes",
         "title": "Big Eyes",
         "subtitle": "Nothing Playground",
+        "style": "NOTHING_MINIMAL",
         "state": {
           "eyes": "●   ●"
         },
@@ -92,11 +93,11 @@
           },
           {
             "type": "spacer",
-            "heightDp": 8
+            "heightDp": 4
           },
           {
             "type": "text",
-            "text": "FRESH EYES",
+            "text": "TAP TO ANIMATE",
             "size": "LABEL",
             "font": "DOT_MATRIX",
             "color": "MUTED",
@@ -119,6 +120,13 @@
               },
               {
                 "type": "button",
+                "label": "Wink",
+                "action": "SET_VALUE",
+                "targetVar": "eyes",
+                "param": "●   —"
+              },
+              {
+                "type": "button",
                 "label": "Squint",
                 "action": "SET_VALUE",
                 "targetVar": "eyes",
@@ -130,6 +138,37 @@
                 "action": "SET_VALUE",
                 "targetVar": "eyes",
                 "param": "◀   ◀"
+              }
+            ]
+          },
+          {
+            "type": "spacer",
+            "heightDp": 8
+          },
+          {
+            "type": "row",
+            "alignment": "SPACE_BETWEEN",
+            "children": [
+              {
+                "type": "button",
+                "label": "Surprise",
+                "action": "SET_VALUE",
+                "targetVar": "eyes",
+                "param": "◉   ◉"
+              },
+              {
+                "type": "button",
+                "label": "Sleep",
+                "action": "SET_VALUE",
+                "targetVar": "eyes",
+                "param": "◡   ◡"
+              },
+              {
+                "type": "button",
+                "label": "Awake",
+                "action": "SET_VALUE",
+                "targetVar": "eyes",
+                "param": "●   ●"
               },
               {
                 "type": "button",
