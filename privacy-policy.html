@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pop Launcher privacy policy">
+  <title>Pop Launcher — Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#faf8f8; --surface:#fffbfc; --text:#211c1e; --muted:#5f5659; --line:#d8d0d2; --accent:#8f425f; --accent-soft:#f1d4dc; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#121112; --surface:#1b191a; --text:#f3eff0; --muted:#c7bbbe; --line:#4a4245; --accent:#b85c79; --accent-soft:#4f202f; } }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:16px; line-height:1.65; }
+    main { width:min(760px, calc(100% - 32px)); margin:0 auto; padding:48px 0 64px; }
+    header { padding-bottom:32px; border-bottom:1px solid var(--line); }
+    h1 { margin:0 0 8px; font-size:clamp(30px,6vw,44px); line-height:1.1; letter-spacing:-.02em; }
+    .lead { margin:0; color:var(--muted); font-size:18px; }
+    .meta { margin-top:16px; color:var(--muted); font-size:14px; }
+    section { padding:32px 0; border-bottom:1px solid var(--line); }
+    section:last-of-type { border-bottom:0; }
+    h2 { margin:0 0 12px; font-size:22px; line-height:1.25; }
+    h3 { margin:24px 0 8px; font-size:17px; }
+    p { margin:0 0 12px; }
+    ul { margin:8px 0 0 20px; padding:0; }
+    li + li { margin-top:6px; }
+    a { color:var(--accent); }
+    .note { margin-top:16px; padding:16px; background:var(--accent-soft); border-radius:12px; }
+    footer { padding-top:24px; color:var(--muted); font-size:14px; }
+    @media (max-width:600px) { main { padding-top:32px; } section { padding:24px 0; } .note { padding:12px; } }
+    :focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Pop Launcher Privacy Policy</h1>
+    <p class="lead">How Pop Launcher handles information on your device and when it uses remote services.</p>
+    <p class="meta">Effective date: September 26, 2026</p>
+  </header>
+
+  <section>
+    <h2>What this build does</h2>
+    <p>Pop Launcher is an Android home-screen launcher. It discovers installed apps, provides local search, hosts Android widgets, and can let you choose optional custom widgets published by the app creator.</p>
+    <p>This build does not include a Pop Launcher account system, subscription or payment system, advertising SDK, Firebase backend, analytics service, or crash-reporting service.</p>
+  </section>
+
+  <section>
+    <h2>Information handled on the device</h2>
+    <ul>
+      <li>Installed-app metadata such as package names, labels, launchable activities and icons is read locally for the launcher and search. This metadata is held in app memory and is not persisted by Pop Launcher.</li>
+      <li>Persisted launcher settings, including accent color, interaction preferences, enabled search providers and friction-app choices.</li>
+      <li>Android widget IDs and the local state of installed custom widgets.</li>
+      <li>Custom-widget definitions downloaded from the published catalog when you choose to add them, plus the IDs of widgets you choose to ignore.</li>
+      <li>Search affinity data, including locally stored search strings paired with selected result IDs, used to improve local result ordering.</li>
+      <li>A cached copy of the latest valid custom-widget manifest so the catalog can still open when the remote source is unavailable.</li>
+    </ul>
+    <p>This information is retained on the device until it is changed, the relevant item is removed, app data is cleared, or the app is uninstalled.</p>
+  </section>
+
+  <section>
+    <h2>Contacts</h2>
+    <p>People search can use Android Contacts permission. The permission is requested only after you choose to enable people search. Contact names and phone numbers are processed locally for search and shortcuts and are not uploaded to a Pop Launcher server.</p>
+    <p>You can revoke Contacts permission at any time from Android system settings. Disabling the People search provider also stops Pop Launcher from using that provider.</p>
+  </section>
+
+  <section>
+    <h2>Custom Widgets</h2>
+    <p>The app can retrieve a creator-controlled JSON manifest over HTTPS. The manifest contains structured widget definitions, names, descriptions, versions, compatibility limits and optional presentation metadata.</p>
+    <p>The app does not download or execute arbitrary remote code. Widget data is validated against a bounded schema before it is displayed or stored. Remote network failure, invalid data, incompatible versions and removed catalog entries are handled without disabling the rest of the launcher.</p>
+    <p>Widgets are never installed automatically. A widget is stored on this device only after you choose <strong>Add</strong>. Removing a custom widget removes its local copy; it remains available in the catalog if the creator publishes it again.</p>
+    <p>Optional widget thumbnails are fetched only over HTTPS and, for remotely published widgets, only from the same host as the manifest.</p>
+  </section>
+
+  <section>
+    <h2>Search and public web services</h2>
+    <p>Local search runs on the device. When the configured web-overview provider is used and local results are insufficient, the search query may be sent to public web services used by the app, including Google, Wikipedia and DuckDuckGo. Those services receive the query according to their own privacy policies.</p>
+    <p>Pop Launcher does not operate a proxy server for those requests and does not store the returned web content as a user profile.</p>
+    <p>If the creator hosts the manifest and this policy on GitHub Pages, GitHub states that visitors' IP addresses are logged and stored for security purposes. That hosting-side processing is governed by GitHub's own privacy practices; Pop Launcher does not receive those logs. </p>
+  </section>
+
+  <section>
+    <h2>Data sharing</h2>
+    <p>There is no Pop Launcher account database or advertising profile in this build. Pop Launcher does not intentionally upload the local installed-app inventory, contact database, widget state or settings to a Pop Launcher backend.</p>
+    <p>Network requests occur only for the public search services described above and for the creator-controlled custom-widget manifest and its same-host thumbnail resources.</p>
+  </section>
+
+  <section>
+    <h2>Your choices and deletion</h2>
+    <ul>
+      <li>Choose which search providers are enabled.</li>
+      <li>Grant or revoke Contacts permission through Android.</li>
+      <li>Add, ignore, update or remove custom widgets individually.</li>
+      <li>Change or reset your accent color and other launcher settings.</li>
+      <li>Clear Pop Launcher app data or uninstall the app to remove locally stored data and caches.</li>
+    </ul>
+    <p>There is no remote Pop Launcher account to delete in this build. There is also no separate Pop Launcher server-side profile retention to request. Locally stored data can be removed by clearing app data or uninstalling the app.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>When the app's data handling changes materially, this policy should be updated and its effective date changed. The app may point to the current hosted copy of this page.</p>
+    <div class="note">This page is shipped as <code>privacy-policy.html</code> in the project so it can be published as a static page with the rest of the app's creator-controlled files.</div>
+  </section>
+
+  <footer>
+    <p>No dedicated privacy contact address is embedded in the source because the project does not currently define a publisher contact address. Policy questions should be directed through the repository or distribution channel used by the publisher of this build.</p>
+  </footer>
+</main>
+</body>
+</html>
