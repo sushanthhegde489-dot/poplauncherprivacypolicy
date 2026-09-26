@@ -34,6 +34,85 @@
           { "type": "progress_bar", "currentVar": "count", "maxVarOrVal": "goal", "color": "ACCENT" }
         ]
       }
+    },
+    {
+      "id": "carl_pei_big_eyes",
+      "name": "Big Eyes",
+      "description": "Interactive dynamic eyes widget inspired by Nothing Playground",
+      "version": 1,
+      "icon": "👀",
+      "definition": {
+        "id": "carl_pei_big_eyes",
+        "title": "Big Eyes",
+        "subtitle": "Nothing Playground",
+        "state": {
+          "eyes": "●   ●"
+        },
+        "elements": [
+          {
+            "type": "spacer",
+            "heightDp": 8
+          },
+          {
+            "type": "text",
+            "text": "{eyes}",
+            "size": "HERO",
+            "font": "DOT_MATRIX",
+            "color": "DEFAULT",
+            "alignment": "CENTER"
+          },
+          {
+            "type": "spacer",
+            "heightDp": 8
+          },
+          {
+            "type": "text",
+            "text": "FRESH EYES",
+            "size": "LABEL",
+            "font": "DOT_MATRIX",
+            "color": "MUTED",
+            "alignment": "CENTER"
+          },
+          {
+            "type": "spacer",
+            "heightDp": 12
+          },
+          {
+            "type": "row",
+            "alignment": "SPACE_BETWEEN",
+            "children": [
+              {
+                "type": "button",
+                "label": "Blink",
+                "action": "SET_VALUE",
+                "targetVar": "eyes",
+                "param": "—   —"
+              },
+              {
+                "type": "button",
+                "label": "Squint",
+                "action": "SET_VALUE",
+                "targetVar": "eyes",
+                "param": "^   ^"
+              },
+              {
+                "type": "button",
+                "label": "Look",
+                "action": "SET_VALUE",
+                "targetVar": "eyes",
+                "param": "◀   ◀"
+              },
+              {
+                "type": "button",
+                "label": "Reset",
+                "action": "RESET",
+                "targetVar": "eyes",
+                "param": "●   ●"
+              }
+        ]
+      }
     }
+  ]
+}
   ]
 }
